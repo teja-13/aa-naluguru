@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 Happy Birthday Bestie! 🎉</title>
+  <style>
+    /* Reset default margin/padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-align: center;
+      overflow-x: hidden;
+      padding: 4vw;
+    }
+
+    h1 {
+      font-size: 7vw;
+      margin-bottom: 6vw;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      animation: popIn 1s ease forwards;
+    }
+
+    button {
+      padding: 3.5vw 7vw;
+      font-size: 4vw;
+      background-color: #ffffff;
+      color: #1e90ff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: popIn 1.5s ease forwards;
+    }
+
+    button:hover {
+      background-color: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    #message {
+      margin-top: 8vw;
+      font-size: 4vw;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6vw;
+      border-radius: 20px;
+      display: none;
+      line-height: 1.6;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    audio {
+      display: none;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Happy Birthday, Bestie! 🎉</h1>
+  <button onclick="giveSurprise()">🎁 Tap for a Surprise!</button>
+
+  <div id="message">🎂🎈 Hey Bestie! You mean the world to me, and I'm so lucky to have you in my life.  
+    I hope your day is as bright, beautiful, and magical as you are! 💙  
+    May all your dreams come true, and may this year bring you endless smiles, love, and happiness! ✨  
+    <br><br>
+    Lots of love, from your forever friend. 💖
+  </div>
+
+  <!-- Audio -->
+  <audio id="birthdayAudio">
+    <source src="doremon.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function giveSurprise() {
+      const audio = document.getElementById("birthdayAudio");
+      audio.play();
+
+      const message = document.getElementById("message");
+      message.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
